@@ -201,10 +201,10 @@ const getCombinedData = async (req, res) => {
         `https://roxiler-product-transaction-dashaboard.onrender.com/api/v1/transaction-statistics?month=${month}`
       ),
       axios.get(
-        `https://roxiler-product-transaction-dashaboard.onrender.com/v1/bar-chart?month=${month}`
+        `https://roxiler-product-transaction-dashaboard.onrender.com/api/v1/bar-chart?month=${month}`
       ),
       axios.get(
-        `https://roxiler-product-transaction-dashaboard.onrender.com/pie-chart?month=${month}`
+        `https://roxiler-product-transaction-dashaboard.onrender.com/api/v1/pie-chart?month=${month}`
       ),
     ]);
 
