@@ -194,12 +194,18 @@ const getCombinedData = async (req, res) => {
       barChartResponse,
       pieChartResponse,
     ] = await Promise.all([
-      axios.get(`http://localhost:3000/api/v1/transactions?month=${month}`),
       axios.get(
-        `http://localhost:3000/api/v1/transaction-statistics?month=${month}`
+        `https://roxiler-product-transaction-dashaboard.onrender.com/api/v1/transactions?month=${month}`
       ),
-      axios.get(`http://localhost:3000/api/v1/bar-chart?month=${month}`),
-      axios.get(`http://localhost:3000/api/v1/pie-chart?month=${month}`),
+      axios.get(
+        `https://roxiler-product-transaction-dashaboard.onrender.com/api/v1/transaction-statistics?month=${month}`
+      ),
+      axios.get(
+        `https://roxiler-product-transaction-dashaboard.onrender.com/v1/bar-chart?month=${month}`
+      ),
+      axios.get(
+        `https://roxiler-product-transaction-dashaboard.onrender.com/pie-chart?month=${month}`
+      ),
     ]);
 
     const combinedResponse = {
